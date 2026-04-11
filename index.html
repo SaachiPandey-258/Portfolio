@@ -1405,4 +1405,11 @@
         }
     }
 
-    document.addEventListe
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            document.getElementById('certModal').classList.remove('open');
+        }
+    });
+</script>
+</body>
+</html>
