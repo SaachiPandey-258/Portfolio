@@ -871,7 +871,7 @@
             <div class="tags" id="m-tags"></div>
         </div>
         <div id="m-pdf-wrap" style="margin-top:20px;display:none;">
-            <a id="m-pdf-link" href="#" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent-glow);border:1px solid rgba(79,195,247,0.25);border-radius:6px;padding:8px 18px;font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--accent);text-decoration:none;letter-spacing:0.08em;transition:all 0.2s;">
+            <a id="m-pdf-link" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent-glow);border:1px solid rgba(79,195,247,0.25);border-radius:6px;padding:8px 18px;font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--accent);text-decoration:none;letter-spacing:0.08em;transition:all 0.2s;">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8 17v-1h8v1H8zm0-3v-1h8v1H8zm0-3V10h4v1H8z"/></svg>
                 View Certificate PDF ↗
             </a>
@@ -1391,7 +1391,7 @@
         const pdfLink = document.getElementById('m-pdf-link');
         if (data.pdf) {
             pdfLink.href = data.pdf;
-            pdfLink.setAttribute('download', data.pdf);
+            pdfLink.removeAttribute('download');
             pdfWrap.style.display = 'block';
         } else {
             pdfWrap.style.display = 'none';
